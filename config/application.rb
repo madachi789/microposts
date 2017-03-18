@@ -31,6 +31,3 @@ module Microposts
     end
   end
 end
-
-  end
-end
