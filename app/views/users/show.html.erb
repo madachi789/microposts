@@ -16,4 +16,6 @@
       </ol>
     <% end %>
   </div>
+　<div><%= link_to 'followings (' + @user.following_users.count.to_s + ')' , followings_user_path(@user) %></div>
+　<div><%= link_to 'followers ('+ @user.follower_users.count.to_s + ')', followers_user_path(@user) %></div>
 </div>
