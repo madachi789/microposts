@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
 
+  # /users/:id
   def show
    @user = User.find(params[:id])
-   @microposts = @user.microposts.order(created_at: :desc)
+   @microposts = @user.microposts.page(params[:page]).order(created_at: :desc)
   end
 
   # 表示する用 → 更新する用

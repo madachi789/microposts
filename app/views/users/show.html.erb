@@ -5,8 +5,11 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+        <div><%= link_to 'followings (' + @user.following_users.count.to_s + ')' , followings_user_path(@user) %></div>
+        <div><%= link_to 'followers ('+ @user.follower_users.count.to_s + ')', followers_user_path(@user) %></div>
     </section>
   </aside>
+  
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
@@ -15,7 +18,6 @@
         <%= render @microposts %>
       </ol>
     <% end %>
+    <%= paginate @microposts %>
   </div>
-　<div><%= link_to 'followings (' + @user.following_users.count.to_s + ')' , followings_user_path(@user) %></div>
-　<div><%= link_to 'followers ('+ @user.follower_users.count.to_s + ')', followers_user_path(@user) %></div>
 </div>
