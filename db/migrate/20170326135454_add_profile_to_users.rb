@@ -1,5 +1,5 @@
 class AddProfileToUsers < ActiveRecord::Migration
   def change
-    add_column :users, :profile, :textarea
+    add_column :users, :profile, :text
   end
 end
