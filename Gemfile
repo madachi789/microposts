@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.8'
 
 gem 'sqlite3', group: :development
-# 本番ではpostgressを使用する
 gem 'pg', group: :production
 
 # Use SCSS for stylesheets
